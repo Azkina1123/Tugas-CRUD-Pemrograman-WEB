@@ -1,0 +1,33 @@
+section.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+
+  padding: 50px 150px;
+}
+
+section.wrapper .img {
+  height: 400px;
+  width: 400px;
+
+  margin-right: 40px;
+}
+
+section.wrapper .desc {
+  font-size: 14pt;
+}
+
+section.wrapper tr:first-child {
+  font-size: 22pt;
+  font-weight: 700;
+}
+section.wrapper td {
+  padding: 10px;
+}
+section.wrapper td:nth-child(1) {
+  width: 80px;
+}
+section.wrapper td:nth-child(3) {
+  width: 100%px;
+}
