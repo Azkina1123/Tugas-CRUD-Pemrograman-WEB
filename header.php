@@ -1,4 +1,4 @@
-    <?php if (!isset($_SESSION["login"])) { ?>
+    <?php if (!isset($_SESSION["username"])) { ?>
       <header>
         <a href="index.php" class="title"><h1>  Tarvita Cell  </h1> </a>
 
@@ -28,7 +28,8 @@
         <a href="products.php?mode=edit" class="link-white"> Edit Product </a>
         <a href="#" class="link-white"> Orders </a>
       </nav>
-    <?php } else if ($_SESSION["login"] == "member") { ?>
+
+    <?php } else if ($_SESSION["username"] == "member") { ?>
         <header>
           <span class="header-left"></span>
           <h1> <a href="member-home.php"> Tarvita Cell </a> </h1>
@@ -46,4 +47,23 @@
           <a href="#" class="link-white"> Cart </a>
           <a href="#" class="link-white"> Orders </a>
         </nav>
-      <?php } ?> 
+    <?php } else if ($_SESSION["username"] == "admin") {?> 
+
+        <header>
+          <span class="header-left"></span>
+          <h1> <a href="member-home.php"> Tarvita Cell </a> </h1>
+          <span class="header-right">
+            <a href="logout.php" class="link-white"> Logout </a>
+          </span>
+        </header>
+
+        <hr>
+
+        <nav class="menu">
+          <a href="member-home.php" class="link-white"> Home </a>
+          <a href="#" class="link-white"> Profile </a>
+          <a href="products.php" class="link-white"> Products </a>
+          <a href="#" class="link-white"> Cart </a>
+          <a href="#" class="link-white"> Orders </a>
+        </nav>
+    <?php }?>

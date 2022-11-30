@@ -21,7 +21,7 @@ if (isset($_POST["login"])) {
     $password == "123"
   ) {
 
-    $_SESSION["login"] = "admin";
+    $_SESSION["username"] = "admin";
 
     echo "<script>
           alert('Proses login sebagai admin berhasil!');
@@ -32,7 +32,6 @@ if (isset($_POST["login"])) {
   } else if ($mode == "member") {
     if (logging_in()) {
 
-      $_SESSION["login"] = "member";
       $_SESSION["username"] = $username;
 
       echo "<script>
